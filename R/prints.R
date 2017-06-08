@@ -141,5 +141,5 @@ print.survivalsvmprediction <- function(x, ...) {
   if(x$typeofsurvivalsvm != "regression"){
   cat("Method used to build 1NN differences     :", x$diff.method,"\n")
   }
-  cat("predictions                              :", x$predicted[1:min(5, length(x$predicted))], "...")
+  cat("Predicted risk ranks                     :", x$predicted[1:min(5, length(x$predicted))], "...")
 }
