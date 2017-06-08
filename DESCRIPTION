@@ -3,11 +3,9 @@ Type: Package
 Title: Survival Support Vector Analysis
 Version: 1.0.0
 Author: Cesaore J. K. Fouodo
-Maintainer: Cesaire Fouodo <cesaire.fouodo@tu-dortmund.de>
+Maintainer: Cesaire Fouodo <fouodo@imbs.uni-luebeck.de>
 Description: Performs survival support vectors analysis.
 Imports: pracma, kernlab, Matrix, stats, Hmisc
 Suggests: survival
 License: GPL
 RoxygenNote: 5.0.1
-NeedsCompilation: no
-Packaged: 2016-12-12 13:59:08 UTC; cesaire
