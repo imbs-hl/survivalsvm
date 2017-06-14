@@ -1,4 +1,4 @@
-#' Predictions of objects of class \code{survivalsvmprediction}.
+#' Predictions of objects of class \code{survivalsvm}.
 #'
 #'
 #' @title Suvirvalsvm predictions
