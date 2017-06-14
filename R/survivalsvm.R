@@ -115,6 +115,7 @@
 #'        Support vector methods for survival analysis: a comparaison between ranking and regression approaches.
 #'        Artificial Intelligence in medecine 53, 107-118.
 #' }
+#' @import survival
 survivalsvm <- function (formula = NULL, data = NULL, subset = NULL, type = "regression",
                         diff.meth = NULL, gamma.mu = NULL, opt.meth = "quadprog", kernel = "lin_kernel",
                         kernel.pars = NULL, time.variable.name = NULL, status.variable.name = NULL,

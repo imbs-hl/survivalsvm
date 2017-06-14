@@ -6,8 +6,9 @@ Author: Cesaire J. K. Fouodo
 Maintainer: Cesaire Fouodo <fouodo@imbs.uni-luebeck.de>
 Description: Performs support vectors analysis for data sets with survival outcome. Three approaches are available in the package: The regression approach takes censoring into account when formulating the inequality constraints of the support vector problem. In the ranking approach, the inequality constraints set the objective to maximize the concordance index for comparable pairs of observations. The hybrid approach combines the regression and ranking constraints in the same model.
 Imports: pracma, kernlab, Matrix, stats, Hmisc
-Suggests: survival
+Suggests: testthat
+Depends: survival
 License: GPL
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 URL: https://github.com/imbs-hl/survivalsvm
 BugReports: https://github.com/imbs-hl/survivalsvm/issues
