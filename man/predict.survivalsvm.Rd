@@ -31,7 +31,7 @@ Object of class \code{survivalsvmprediction}, with elements:
  }
 }
 \description{
-Predictions of objects of class \code{survivalsvmprediction}.
+Predictions of objects of class \code{survivalsvm}.
 }
 \examples{
 require(survival)
