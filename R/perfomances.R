@@ -6,9 +6,10 @@
 #' @param Y [\code{vector}(1)]\cr
 #' A numeric vector of truth survival times obeserved.
 #'
+#' @export
 #' @return [\code{Integer}]
 #' Concordance index.
-#' @export
+#' @keywords internal
 conindex <- function(obj, Y){
   if (!inherits(obj, "survivalsvmprediction")) {
     stop("Error: 'obj' must an object af class survivalsvmprediction.")
@@ -34,12 +35,14 @@ conindex <- function(obj, Y){
 #' A numeric vector.
 #' @param d2 [\code{vector}(1)]\cr
 #' A binary vector.
+#' @export
 #'
 #' @return list of:
 #' \tabular{ll}{
 #'  \code{chi_sq} \tab chi-squared statistic at a significance level of 95 \% and one degree of freedom, \cr
 #'  \code{chi_p} \tab chi-squared probality at a significance level of 95 \% and one degree of freedom. \cr
 #' }
+#' @keywords internal
 logrank <- function(t1, d1, t2, d2){
   t1.ord <- order(t1)
   t1 <- t1[t1.ord]
@@ -81,12 +84,14 @@ logrank <- function(t1, d1, t2, d2){
 #' Numeric vector (of survival times).
 #' @param delta [\code{vector}(1)]\cr
 #' Binary vector (of status).
+#' @export
 #'
 #' @return list of:
 #' \tabular{ll}{
 #'  \code{chi_sq} \tab chi-squared statistic and \cr
 #'  \code{chi_p} \tab chi-squared probality. \cr
 #' }
+#' @keywords internal
 getLogrank <- function(obj, t, delta){
   if (!inherits(obj, "survivalsvmprediction")) {
     stop("Error: 'obj' must be an object af class survivalsvmprediction.")

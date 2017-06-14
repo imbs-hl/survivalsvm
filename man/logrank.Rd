@@ -29,3 +29,4 @@ list of:
 \description{
 compute the Logrank
 }
+\keyword{internal}

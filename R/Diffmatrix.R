@@ -28,6 +28,8 @@
 #'
 #' @examples Y <- c(1,3,3.5,4,8); delta <- c(0,0,1,1,0); makediff3(Y, delta)
 #' @seealso \code{\link{makediff1}} and \code{\link{makediff2}}
+#' 
+#' @keywords internal
 makediff3 <- function (Y, delta) {
   if (!prod(sort(Y) == Y)) {
     stop("sort Y first!")
@@ -77,6 +79,7 @@ makediff3 <- function (Y, delta) {
 #'
 #' @examples Y <- c(1,3,3.5,4,8); delta <- c(0,0,1,1,0); makediff2(Y, delta)
 #' @seealso \code{\link{makediff1}} and \code{\link{makediff3}}
+#' @keywords internal
 makediff2 <- function (Y, delta) {
   # supposes all entries to be no-censored when no delta's parameter
   n <- length(Y)
@@ -136,6 +139,7 @@ makediff2 <- function (Y, delta) {
 #'
 #' @examples Y <- c(1,3,3.5,4,8); delta <- c(0,0,1,1,0); makediff1(Y, delta)
 #' @seealso \code{\link{makediff2}} and \code{\link{makediff3}}
+#' @keywords internal
 makediff1 <- function (Y, delta) {
   n <- length(Y)
   D1 <- diag(n)

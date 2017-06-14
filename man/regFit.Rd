@@ -75,3 +75,4 @@ The function \code{regFit} fits a \code{survivalsvm} model based on the regressi
 \author{
 Cesaire J. K. Fouodo
 }
+\keyword{internal}

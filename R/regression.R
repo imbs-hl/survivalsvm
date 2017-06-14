@@ -71,6 +71,7 @@
 #' @param posd.tol [\code{numeric(1)}]\cr
 #' used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
 #'
+#' @export
 #' @return [\code{\link{RegFitObj}(1)}]
 #' object of class \code{RegFitObj} containing elements:
 #' \tabular{ll}{
@@ -82,6 +83,7 @@
 #'  }
 #'
 #' @author Cesaire J. K. Fouodo
+#' @keywords internal
 regFit <- function(X, Y, delta, meth_par = 1, kernel_type = "lin_kernel",
                    kernel_pars = NA, bin_cat = integer(0), opt_alg = "quadprog",
                    sgf_sv = 5, sigf = 7, maxiter = 20, margin = 0.05, bound = 10,

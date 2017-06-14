@@ -26,3 +26,4 @@ list of:
 \description{
 computes the logrank statistic.
 }
+\keyword{internal}

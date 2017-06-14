@@ -20,3 +20,4 @@ Concordance index.
 \description{
 computes the concordance index.
 }
+\keyword{internal}

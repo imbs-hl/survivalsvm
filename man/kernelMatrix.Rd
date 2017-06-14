@@ -39,3 +39,4 @@ computes the kernel matrix for elements taken in an argument.
 \author{
 Cesaire J. K. Fouodo
 }
+\keyword{internal}

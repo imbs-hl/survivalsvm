@@ -83,6 +83,7 @@
 #' @param posd.tol [\code{numeric(1)}]\cr
 #' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
 #'
+#' @export
 #' @return [\code{Hybrid(1)}]
 #' Object of class \code{Hybrid} containing elements:
 #' \tabular{ll}{
@@ -93,6 +94,7 @@
 #'    \code{OptMeth} \tab Program used to solve the quadratic optimization problem.\cr
 #'  }
 #'
+#' @keywords internal
 #' @author Cesaire J. K. Fouodo
 hybridFit <- function (X, Y, delta,
                       meth_par = c(1, 1), kernel_type = "lin_kernel",

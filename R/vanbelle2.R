@@ -81,6 +81,7 @@
 #' @param posd.tol [\code{numeric(1)}]\cr
 #' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
 #'
+#' @export
 #' @return [\code{VB2FitObj(1)}]
 #' Object of class \code{VB2FitObj} containing elements:
 #' \tabular{ll}{
@@ -92,6 +93,7 @@
 #'  }
 #'
 #' @author Cesaire J. K. Fouodo
+#' @keywords internal
 vanbelle2Fit <- function (X, Y, delta,
                          meth_par = 1, kernel_type = "lin_kernel",
                          kernel_pars = NA, bin_cat = integer(0),

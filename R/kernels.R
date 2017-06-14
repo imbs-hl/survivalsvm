@@ -28,6 +28,7 @@
 #' Matrix of data points to be mapped.
 #' @param bin_cat indexes of binary/categorical variables.
 #'
+#' @export
 #' @return [\code{\link{Kernel}(1)}]
 #' Object of class Kernel, with elements:
 #' \tabular{ll}{
@@ -36,6 +37,7 @@
 #'  }
 #'
 #' @author Cesaire J. K. Fouodo
+#' @keywords internal
 kernelMatrix <- function (Xtrain, kernel_type = "lin_kernel", kernel_pars, Xt = NULL, bin_cat = integer(0)) {
   nb_data <- nrow(Xtrain)
   d <- ncol(Xtrain)
