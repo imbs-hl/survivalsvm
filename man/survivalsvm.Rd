@@ -74,7 +74,7 @@ Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearP
 Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
 }
 \value{
-[\code{survivalsvm(1)}]
+\code{survivalsvm}
 Object of class \code{survivalsvm}, with elements:
 \tabular{ll}{
    \code{call} \tab command calling this program, \cr
@@ -83,59 +83,26 @@ Object of class \code{survivalsvm}, with elements:
    \code{var.names} \tab names of variables used.\cr
  }
 }
-\description{
-survivalsvm is based on support vector methods to fit survival models. Three approaches are followed in this package:
-the regression, the ranking and the hybrid approaches. The hybrid approach is a combination of regression
-and ranking approaches.
-}
-\details{
-Three approaches are used to fit survival models using the support vector method: the regression, the ranking, and the
-hybrid approaches, presented by Van Belle et al. (2011a) and Van Belle et al. (2011b). The following denotations are
-used for the models implemented:
- \itemize{
-   \item \code{'regression'} referring to the regression approach, named \code{SVCR} in Van Belle et al. (2011b),
-   \item \code{'vanbelle1'} according to the first version of survival surpport vector machines based on ranking constraints,
-         named \code{RANKSVMC} by Van Belle et al. (2011b),
-   \item \code{'vanbelle2'} according to the second version of survival surpport vector machines based on ranking constraints
-         like presented in \code{model1} by Van Belle et al. (2011b) and
-   \item \code{'hybrid'}  combines simultaneously the regression and ranking constraints in the same model. Hybrid model is labeled
-         \code{model2} by Van Belle et al. (2011b).
-
-}
-The argument \code{'type'} of the function \code{survivalsvm} must be used to set the type of model that need to be fitted.
-Notice that for the models \code{vanbelle1}, \code{vanbelle2} and \code{hybrid},  differences between comparable
-pairs of data points are required. Each data point is compared with its nearest neighbor according to the survival time, and the
-three possible comparison approaches \link{makediff1}, \link{makediff2} and \link{makediff3} are offered to compute the
-differences between comparable neighbors.
-
-The actual version of \code{survivalsvm} uses the solvers \code{\link{ipop}} and \code{\link{quadprog}} to solve the dual
-optimization problems deduced from the suport vector formulations of the models presented above. Notice that for using \code{quadprog}
-the kernel matrix needs to be symmetric and positive definite. Therefore when the conditions are not met, the kernel matrix needs be slightly perturbed to obtain the nearest positive definite kernel matrix.
-The alternative to \code{quadprog} is \code{ipop}, that can also handle a non-negative definite kernel matrix, however more time may be
-required to solve the quadratic optimization dual problem. The argument \code{opt.meth} must be specify to select the solver.
-
-The \code{survivalsvm} command can be called giving a formula, in which the survival time and the status are grouped into a
-two colunm matrix using the command \code{\link{Surv}} from the package \code{survival}. An alternative is to pass the data
-frame of training data points as an argument using \code{data}, to mention the name of the survival time variable and
-the name of the status variable as illustrated in the example below.
-}
 \note{
-This implementation is inspired from the \code{matlab} software \code{Survlab}
+This implementation is in part inspired by the \code{Matlab} toolbox \code{Survlab}
  (\href{http://user.it.uu.se/~kripe367/survlab/instruction.html}{\code{A Survival Analysis Toolbox}}).
 }
 \examples{
-require(survival)
-survsvm.vb2 <- survivalsvm(data = veteran, subset = NULL, type = "vanbelle2",
-                           diff.meth = "makediff3", gamma.mu = 0.1,
-                           opt.meth = "quadprog", kernel = "lin_kernel",
-                           kernel.pars = NULL, time.variable.name = "diagtime",
-                           status.variable.name = "status",  sgf.sv = 5, sigf = 7,
-                           maxiter = 20, margin = 0.05, bound = 10)
+
+survivalsvm(Surv(time, status) ~ ., veteran, gamma.mu = 0.1)
 
 survsvm.reg <- survivalsvm(formula = Surv(diagtime, status) ~ ., data = veteran,
-                           subset = NULL, type = "regression", gamma.mu = 0.1,
-                           diff.meth = NULL, opt.meth = "ipop",
-                            kernel = "add_kernel")
+                           type = "regression", gamma.mu = 0.1,
+                           opt.meth = "ipop", kernel = "add_kernel")
+                            
+survsvm.vb2 <- survivalsvm(data = veteran, time.variable.name = "diagtime",
+                           status.variable.name = "status", 
+                           type = "vanbelle2", gamma.mu = 0.1,
+                           opt.meth = "quadprog", diff.meth = "makediff3", 
+                           kernel = "lin_kernel",
+                           sgf.sv = 5, sigf = 7, maxiter = 20, 
+                           margin = 0.05, bound = 10)
+                            
 }
 \references{
 \itemize{
