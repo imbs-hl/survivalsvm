@@ -1,3 +1,4 @@
+[![Travis Build Status](https://travis-ci.org/imbs-hl/survivalsvm.svg?branch=master)](https://travis-ci.org/imbs-hl/survivalsvm)
 ## Survival Support Vector Analysis
 Cesaire J. K. Fouodo
 
