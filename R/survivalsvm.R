@@ -1,10 +1,9 @@
-# function using the formula to construct the model
-#--------------------------------------------------------------------------------------------------------------
-#' survivalsvm performs support vectors analysis for data sets with survival outcome. 
+#' Performs support vectors analysis for data sets with survival outcome. 
 #' Three approaches are available in the package: 
 #' The regression approach takes censoring into account when formulating the inequality constraints of the support vector problem. 
 #' In the ranking approach, the inequality constraints set the objective to maximize the concordance index for comparable pairs of observations. 
 #' The hybrid approach combines the regression and ranking constraints in the same model.
+#' 
 #' The following denotations are used for the models implemented:
 #'  \itemize{
 #'    \item \code{'regression'} referring to the regression approach, named \code{SVCR} in Van Belle et al. (2011b),
@@ -89,7 +88,6 @@
 #'
 #' @seealso \link{predict.survivalsvm}
 #' @examples 
-#'
 #' survivalsvm(Surv(time, status) ~ ., veteran, gamma.mu = 0.1)
 #'
 #' survsvm.reg <- survivalsvm(formula = Surv(diagtime, status) ~ ., data = veteran,

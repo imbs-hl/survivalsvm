@@ -83,12 +83,47 @@ Object of class \code{survivalsvm}, with elements:
    \code{var.names} \tab names of variables used.\cr
  }
 }
+\description{
+Performs support vectors analysis for data sets with survival outcome. 
+Three approaches are available in the package: 
+The regression approach takes censoring into account when formulating the inequality constraints of the support vector problem. 
+In the ranking approach, the inequality constraints set the objective to maximize the concordance index for comparable pairs of observations. 
+The hybrid approach combines the regression and ranking constraints in the same model.
+}
+\details{
+The following denotations are used for the models implemented:
+ \itemize{
+   \item \code{'regression'} referring to the regression approach, named \code{SVCR} in Van Belle et al. (2011b),
+   \item \code{'vanbelle1'} according to the first version of survival surpport vector machines based on ranking constraints,
+         named \code{RANKSVMC} by Van Belle et al. (2011b),
+   \item \code{'vanbelle2'} according to the second version of survival surpport vector machines based on ranking constraints
+         like presented in \code{model1} by Van Belle et al. (2011b) and
+   \item \code{'hybrid'}  combines simultaneously the regression and ranking constraints in the same model. Hybrid model is labeled
+         \code{model2} by Van Belle et al. (2011b).
+
+}
+The argument \code{'type'} of the function \code{survivalsvm} is used to set the type of model to be fitted.
+For the models \code{vanbelle1}, \code{vanbelle2} and \code{hybrid}, differences between comparable
+pairs of observations are required. Each observation is compared with its nearest neighbor according to the survival time, and the
+three possible comparison approaches \link{makediff1}, \link{makediff2} and \link{makediff3} are offered to compute the
+differences between comparable neighbors.
+
+The current version of \code{survivalsvm} uses the solvers \code{\link{ipop}} and \code{\link{quadprog}} to solve the dual
+optimization problems deduced from the suport vector formulations of the models presented above. Notice that for using \code{quadprog}
+the kernel matrix needs to be symmetric and positive definite. Therefore when the conditions are not met, the kernel matrix needs be slightly perturbed to obtain the nearest positive definite kernel matrix.
+The alternative to \code{quadprog} is \code{ipop}, that can also handle a non-negative definite kernel matrix, however more time may be
+required to solve the quadratic optimization dual problem. The argument \code{opt.meth} is used to select the solver.
+
+The \code{survivalsvm} command can be called giving a formula, in which the survival time and the status are grouped into a
+two colunm matrix using the command \code{\link{Surv}} from the package \code{survival}. An alternative is to pass the data
+frame of training data points as an argument using \code{data}, to mention the name of the survival time variable and
+the name of the status variable as illustrated in the third example below.
+}
 \note{
 This implementation is in part inspired by the \code{Matlab} toolbox \code{Survlab}
  (\href{http://user.it.uu.se/~kripe367/survlab/instruction.html}{\code{A Survival Analysis Toolbox}}).
 }
 \examples{
-
 survivalsvm(Surv(time, status) ~ ., veteran, gamma.mu = 0.1)
 
 survsvm.reg <- survivalsvm(formula = Surv(diagtime, status) ~ ., data = veteran,
