@@ -24,4 +24,3 @@ Mutator for the field \code{Mat} of objects of class \code{Diffmatrix}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

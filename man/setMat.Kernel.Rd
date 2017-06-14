@@ -30,4 +30,3 @@ Mutator of the field \code{Mat} of the object of class \code{Kernel} taken in an
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

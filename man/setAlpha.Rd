@@ -20,4 +20,3 @@ Creator of the generic mutator \code{setAlpha}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

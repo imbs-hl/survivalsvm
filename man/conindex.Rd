@@ -20,4 +20,3 @@ Concordance index.
 \description{
 computes the concordance index.
 }
-

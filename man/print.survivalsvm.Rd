@@ -19,4 +19,3 @@ Prints  object of class \code{survivalsvm}.
 \author{
 Cesaire J. K. Fouodo
 }
-

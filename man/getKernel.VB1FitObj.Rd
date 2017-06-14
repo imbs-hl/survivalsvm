@@ -21,4 +21,3 @@ access the object of class \code{Kernel} in the \code{Kernel} field.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

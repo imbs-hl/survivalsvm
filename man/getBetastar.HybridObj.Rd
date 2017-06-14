@@ -21,4 +21,3 @@ Creator of the generic accessor \code{Betastar}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

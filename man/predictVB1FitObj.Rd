@@ -30,4 +30,3 @@ Predictions based on model fitted using the ranking approach of survival support
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

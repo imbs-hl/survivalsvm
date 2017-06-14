@@ -51,4 +51,3 @@ Object of class \code{Hybrid} containing elements:
 Constructs object of class \code{VB2FitObj}.\cr
 }
 \keyword{internal}
-

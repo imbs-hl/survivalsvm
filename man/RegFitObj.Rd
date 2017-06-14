@@ -31,4 +31,3 @@ object of class \code{RegFitObj} containing elements:
 Constructs object of class \code{RegFitObj}.
 }
 \keyword{internal}
-

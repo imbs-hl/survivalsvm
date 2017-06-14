@@ -23,4 +23,3 @@ Mutator of the field \code{Type} of the object taken in an argument.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

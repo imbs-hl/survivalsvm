@@ -20,4 +20,3 @@ Creator of generic mutator \code{setMat}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

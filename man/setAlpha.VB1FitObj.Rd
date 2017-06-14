@@ -20,4 +20,3 @@ modified version of the object taken in an argument.
 Default mutator of the field \code{Alpha} of the object taken in an argument.
 }
 \keyword{internal}
-

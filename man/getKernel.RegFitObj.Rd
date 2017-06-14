@@ -21,4 +21,3 @@ Creator of the generic accessor \code{Kernel}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

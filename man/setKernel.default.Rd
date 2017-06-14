@@ -21,4 +21,3 @@ modified object.
 setKernel.default
 }
 \keyword{internal}
-

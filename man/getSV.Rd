@@ -17,4 +17,3 @@ Creator of the generic accessor \code{getSV}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

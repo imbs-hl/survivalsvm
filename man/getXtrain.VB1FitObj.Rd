@@ -21,4 +21,3 @@ Field of the object of class \code{VB1FitObj} taken in the argument.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

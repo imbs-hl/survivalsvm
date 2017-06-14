@@ -81,4 +81,3 @@ fits the 'vanbelle1' version of the ranking approach of survival support vector 
 \author{
 Cesaire J. K. Fouodo
 }
-

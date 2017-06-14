@@ -20,4 +20,3 @@ Creator of the generic mutator \code{setKernel}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

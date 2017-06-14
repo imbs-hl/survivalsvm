@@ -21,4 +21,3 @@ Creator of the generic accessor \code{Delta}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

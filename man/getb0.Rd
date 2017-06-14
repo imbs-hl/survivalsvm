@@ -17,4 +17,3 @@ Creator of the generic accessor \code{getb0}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

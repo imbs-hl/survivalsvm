@@ -20,4 +20,3 @@ Print of object of class \code{Hybrid}. \code{Hybrid} is the class of models fit
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

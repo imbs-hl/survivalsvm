@@ -30,4 +30,3 @@ Mutator of the field \code{Kernpar} of the object of class \code{Kernel} taken i
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

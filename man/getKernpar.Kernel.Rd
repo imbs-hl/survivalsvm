@@ -21,4 +21,3 @@ Accessor for the field \code{Kernpar} of the object of class \code{Kernel} taken
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

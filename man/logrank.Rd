@@ -29,4 +29,3 @@ list of:
 \description{
 compute the Logrank
 }
-

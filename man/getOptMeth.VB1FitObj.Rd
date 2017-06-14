@@ -21,4 +21,3 @@ access to the method in \code{OptMeth} field.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

@@ -20,4 +20,3 @@ Creator of the generic mutator \code{setBeta}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

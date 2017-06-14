@@ -27,4 +27,3 @@ object of class survivalsvmprediction, with elements:
 Predictions based on model fitted using the ranking approach of survival support vector machines.
 }
 \keyword{internal}
-

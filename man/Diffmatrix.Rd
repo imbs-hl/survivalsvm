@@ -25,4 +25,3 @@ Mutated object of class \code{Diffmatrix} containing elements:\cr
 constructs objects of class \code{Diffmatrix}.
 }
 \keyword{internal}
-

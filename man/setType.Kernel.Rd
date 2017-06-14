@@ -23,4 +23,3 @@ Mutator of the field \code{Type} of the object of class \code{Kernel} taken in a
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

@@ -20,4 +20,3 @@ Modified version of the object taken in argument.
 Default mutator of the field \code{DifMat} of the object taken in an argument.
 }
 \keyword{internal}
-

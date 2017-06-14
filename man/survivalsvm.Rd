@@ -137,9 +137,6 @@ survsvm.reg <- survivalsvm(formula = Surv(diagtime, status) ~ ., data = veteran,
                            diff.meth = NULL, opt.meth = "ipop",
                             kernel = "add_kernel")
 }
-\author{
-Cesaire J. K. Fouodo
-}
 \references{
 \itemize{
  \item Van Belle, V., Pelcmans, K., Van Huffel S. and Suykens J. A.K. (2011a).
@@ -153,4 +150,6 @@ Cesaire J. K. Fouodo
 \seealso{
 \link{predict.survivalsvm}
 }
-
+\author{
+Cesaire J. K. Fouodo
+}

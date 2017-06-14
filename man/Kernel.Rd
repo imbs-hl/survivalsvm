@@ -35,4 +35,3 @@ Constructor of objects of class \code{Kernel}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

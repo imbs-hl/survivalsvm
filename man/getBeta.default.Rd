@@ -20,4 +20,3 @@ Accessor for the field \code{Beta} for the object taken in an argument.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

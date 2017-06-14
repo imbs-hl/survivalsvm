@@ -31,4 +31,3 @@ Y <- c(1,3,3.5,4,8); delta <- c(0,0,1,1,0); makediff1(Y, delta)
 \seealso{
 \code{\link{makediff2}} and \code{\link{makediff3}}
 }
-

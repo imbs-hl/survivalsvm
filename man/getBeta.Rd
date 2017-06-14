@@ -17,4 +17,3 @@ Creator of the generic accessor \code{getBeta}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

@@ -20,4 +20,3 @@ Accessor for the field \code{Bincat} for the object taken in the argument.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

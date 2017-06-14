@@ -81,4 +81,3 @@ fits survivalsvm model based on hybrid approach method for survival support vect
 \author{
 Cesaire J. K. Fouodo
 }
-

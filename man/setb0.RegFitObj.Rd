@@ -21,4 +21,3 @@ modified version of the object taken in the argument.
 Default mutator of the field \code{b0} of the object taken in an argument.
 }
 \keyword{internal}
-

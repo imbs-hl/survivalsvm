@@ -17,4 +17,3 @@ Creator of the generic accessor \code{getDifMat}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

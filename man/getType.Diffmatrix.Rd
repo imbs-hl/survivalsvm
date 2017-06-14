@@ -18,4 +18,3 @@ Type of Diffmatrix
 Mutator for objects of class \code{Diffmatrix}.
 }
 \keyword{internal}
-

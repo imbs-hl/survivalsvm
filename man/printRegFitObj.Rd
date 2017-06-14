@@ -20,4 +20,3 @@ Print of object of class \code{RegFitObj}. \code{RegFitObj} is the class of mode
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

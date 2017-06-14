@@ -21,4 +21,3 @@ Creator of the generic accessor \code{OptMeth}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

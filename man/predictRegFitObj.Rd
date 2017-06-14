@@ -31,4 +31,3 @@ Predictions based on model fitted using the regression approach of survival supp
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

@@ -38,4 +38,3 @@ Object of class \code{RegFitObj} containing elements:
 Constructs object of class \code{VB2FitObj}.
 }
 \keyword{internal}
-

@@ -30,4 +30,3 @@ Maker of predictions based on model fitted using the hybrid approach of survival
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

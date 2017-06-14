@@ -21,4 +21,3 @@ access to the matrix in the \code{DifMat} field.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

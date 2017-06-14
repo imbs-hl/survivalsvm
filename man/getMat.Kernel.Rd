@@ -21,4 +21,3 @@ Accessor for the field \code{Mat} of the object of class \code{Kernel} taken in 
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

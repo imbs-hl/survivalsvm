@@ -20,4 +20,3 @@ Creator of the generic mutator \code{setb0}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

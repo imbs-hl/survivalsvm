@@ -24,4 +24,3 @@ Default mutator of the field \code{b0} of the object taken in an argument.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

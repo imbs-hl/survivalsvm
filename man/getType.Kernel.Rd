@@ -20,4 +20,3 @@ Accessor for the field \code{Type} of the object of class \code{Kernel} taken in
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

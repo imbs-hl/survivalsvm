@@ -46,10 +46,9 @@ survsvm.reg <- survivalsvm(Surv(veteran$diagtime, veteran$status) ~ .,
 pred.survsvm.reg <- predict(object = survsvm.reg, newdata = veteran, subset = test.index)
 print(pred.survsvm.reg)
 }
-\author{
-Cesaire J. K. Fouodo
-}
 \seealso{
 \link{survivalsvm}
 }
-
+\author{
+Cesaire J. K. Fouodo
+}

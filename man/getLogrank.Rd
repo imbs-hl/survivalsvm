@@ -26,4 +26,3 @@ list of:
 \description{
 computes the logrank statistic.
 }
-

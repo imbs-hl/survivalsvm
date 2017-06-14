@@ -21,4 +21,3 @@ Mutated object of class \code{Diffmatrix} containing elements.
 Mutator for the type of objects of class \code{Diffmatrix}
 }
 \keyword{internal}
-

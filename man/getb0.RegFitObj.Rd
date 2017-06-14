@@ -21,4 +21,3 @@ Creator of the generic accessor \code{b0}.
 Cesaire J. K. Fouodo
 }
 \keyword{internal}
-

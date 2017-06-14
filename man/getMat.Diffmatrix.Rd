@@ -17,4 +17,3 @@ The matrix used to perform differences between comparable data points.
 To get the matrix used to perform differences between comparable data points for object of class Diffmatrix.
 }
 \keyword{internal}
-
