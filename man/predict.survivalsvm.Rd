@@ -23,9 +23,9 @@ Further arguments passed to or from other methods.}
 [\code{survivalsvmprediction(1)}]
 Object of class \code{survivalsvmprediction}, with elements:
 \tabular{ll}{
-   \code{typeofsurvivalsvm} \tab Type of  \code{survivalsvm} object that is fitted in model, \cr
+   \code{typeofsurvivalsvm} \tab Type of  \code{survivalsvm} object that is fitted in the model, \cr
    \code{typeofkernel} \tab type of kernel used to fit the model,\cr
-   \code{parameterofkernel} \tab parameters of kernel that used to fit the model,\cr
+   \code{parameterofkernel} \tab Kernel parameters used to fit the model,\cr
    \code{opt.meth} \tab solver used to fit the model,\cr
    \code{predicted} \tab values predicted.\cr
  }
