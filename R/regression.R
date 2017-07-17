@@ -121,6 +121,9 @@ regFit <- function(X, Y, delta, meth_par = 1, kernel_type = "lin_kernel",
     cbind(round(opt@primal[1:n], sgf_sv), round(opt@primal[(n + 1):(2 * n)], sgf_sv))
   }
   i.sv <- which(!(rowSums(betapar) == 0))
+  if(length(i.sv) == 0) {
+    stop("Inconsistent solutions when trying optimization with the given parameters.")
+  }
   betapar <- matrix(betapar[i.sv,], ncol = 2, byrow = FALSE)
   sv <- matrix(X[i.sv, ], byrow = FALSE, ncol = ncol(X))
   Ker.sv <- kernelMatrix(Xtrain = sv, kernel_type = kernel_type, kernel_pars = kernel_pars, bin_cat = bin_cat)

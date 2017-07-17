@@ -38,7 +38,8 @@
 #'
 #' @author Cesaire J. K. Fouodo
 #' @keywords internal
-kernelMatrix <- function (Xtrain, kernel_type = "lin_kernel", kernel_pars, Xt = NULL, bin_cat = integer(0)) {
+kernelMatrix <- function (Xtrain, kernel_type = "lin_kernel", kernel_pars,
+                          Xt = NULL, bin_cat = integer(0)) {
   nb_data <- nrow(Xtrain)
   d <- ncol(Xtrain)
   if (tolower(kernel_type) == "rbf_kernel") {

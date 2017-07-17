@@ -251,6 +251,9 @@ survivalsvm <- function (formula = NULL, data = NULL, subset = NULL, type = "reg
     X <- data.matrix(traindata)
     X <- X[stats::complete.cases(X), , drop = FALSE]
     if (ncol(X) == 0) {
+      stop("No variable in the data frame given in argument.")
+    }
+    if (nrow(X) == 0) {
       stop("No observation in the data frame given in argument.")
     }
   }
