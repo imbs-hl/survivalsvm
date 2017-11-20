@@ -107,7 +107,7 @@ regFit <- function(X, Y, delta, meth_par = 1, kernel_type = "lin_kernel",
   D2 <- cbind(-delta * K, K)
   D <- rbind(D1, D2)
   opt <- if (opt_alg == "quadprog") {
-    pracma::quadprog(C =  as.matrix(Matrix::nearPD(D, eig.tol = eig.tol, conv.tol = conv.tol, posd.tol = posd.tol)$mat),
+    quadprog(C =  as.matrix(Matrix::nearPD(D, eig.tol = eig.tol, conv.tol = conv.tol, posd.tol = posd.tol)$mat),
                      d = c(-Y, delta*Y), Aeq = c(rep(-1, n), delta),
              beq = 0, A = -diag(2*n), b = rep(0, 2*n), lb = 0, ub = meth_par)
   } else{

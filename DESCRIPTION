@@ -1,7 +1,7 @@
 Package: survivalsvm
 Type: Package
 Title: Survival Support Vector Analysis
-Version: 0.0.2
+Version: 0.0.3
 Author: Cesaire J. K. Fouodo
 Maintainer: Cesaire Fouodo <fouodo@imbs.uni-luebeck.de>
 Description: Performs support vectors analysis for data sets with survival
@@ -13,6 +13,7 @@ Description: Performs support vectors analysis for data sets with survival
     constraints in the same model.
 Imports:
     pracma,
+    quadprog,
     kernlab,
     Matrix,
     stats,
