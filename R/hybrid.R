@@ -131,7 +131,7 @@ hybridFit <- function (X, Y, delta,
   l3 <- cbind(-delta.KDc.t, -K, K)
   H <- rbind(l1, l2, l3)
   opt <- if (opt_alg == "quadprog") {
-    quadprog::quadprog(C =  as.matrix(Matrix::nearPD(H, eig.tol = eig.tol, conv.tol = conv.tol, posd.tol = posd.tol)$mat),
+    pracma::quadprog(C =  as.matrix(Matrix::nearPD(H, eig.tol = eig.tol, conv.tol = conv.tol, posd.tol = posd.tol)$mat),
                      d = c(-crossprod(t(Dc), Y), -Y, delta*Y),
              A = -diag(3*n - 1), b = rep(0, 3*n-1), lb = rep(0, 3*n-1), ub = c(rep(meth_par[1], n-1), rep(meth_par[2], 2*n)),
              Aeq = c(rep(0, n-1), rep(-1, n), delta), beq = 0)
