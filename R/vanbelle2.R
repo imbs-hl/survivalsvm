@@ -120,7 +120,7 @@ vanbelle2Fit <- function (X, Y, delta,
   D <- crossprod(t(Dc), tcrossprod(K, Dc))
   # Solves the dual problem
   opt <- if (opt_alg == "quadprog") {
-    quadprog(C = D <- as.matrix(Matrix::nearPD(D, eig.tol = eig.tol, conv.tol = conv.tol, posd.tol = posd.tol)$mat),
+    quadprog::quadprog(C = D <- as.matrix(Matrix::nearPD(D, eig.tol = eig.tol, conv.tol = conv.tol, posd.tol = posd.tol)$mat),
                      d = -drop(crossprod(t(Dc), Y)), A = -diag(n-1), b = rep(0, n-1), lb = 0, ub = meth_par)
   } else {
     kernlab::ipop(H =  D, c = -crossprod(t(Dc), Y), A = t(rep(1, n-1)), b = 0, l = rep(0, n-1), u = rep(meth_par, n-1),
