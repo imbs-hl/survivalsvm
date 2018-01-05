@@ -25,7 +25,7 @@ print.survivalsvm <- function(x, ...) {
     result <- printHybrid(object = x)
   }
   cat("survivalsvm version                :", 
-     x$package.version, "\n")
+      paste(x$package.version, collapse = "."), "\n")
 }
 
 #' Print of object of class \code{RegFitObj}. \code{RegFitObj} is the class of models fitted using the regression approach of survival support vector machines.
@@ -146,5 +146,5 @@ print.survivalsvmprediction <- function(x, ...) {
   cat("predicted risk ranks                     :", round(x$predicted[1:min(5, 
                                             length(x$predicted))], 2), "...\n")
   cat("survivalsvm version                      :", 
-      x$package.version, "\n")
+      paste(x$package.version, collapse = "."), "\n")
 }
