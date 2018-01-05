@@ -37,6 +37,7 @@
 #'                            opt.meth = "quadprog", kernel = "add_kernel")
 #' pred.survsvm.reg <- predict(object = survsvm.reg, newdata = veteran, subset = test.index)
 #' print(pred.survsvm.reg)
+#' @importFrom utils packageVersion
 predict.survivalsvm <- function(object, newdata, subset = NULL, ...) {
   if (!inherits(object, "survivalsvm")) {
     stop("Error: 'object' must be a survivalsvm object.")
@@ -146,6 +147,7 @@ predict.survivalsvm <- function(object, newdata, subset = NULL, ...) {
   if (object$typeofsurvivalsvm == "hybrid") {
     result <- predictHybrid(object = object$model.fit, X_pred = X_pred)
   }
+  result$package.version <- unlist(packageVersion("survivalsvm"))
   return(result)
 }
 
