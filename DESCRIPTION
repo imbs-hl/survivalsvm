@@ -1,7 +1,7 @@
 Package: survivalsvm
 Type: Package
 Title: Survival Support Vector Analysis
-Version: 0.0.4
+Version: 0.0.5
 Date: 2018-01-05
 Author: Cesaire J. K. Fouodo
 Maintainer: Cesaire Fouodo <fouodo@imbs.uni-luebeck.de>
