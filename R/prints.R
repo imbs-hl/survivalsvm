@@ -24,8 +24,6 @@ print.survivalsvm <- function(x, ...) {
   if (x$typeofsurvivalsvm == "hybrid") {
     result <- printHybrid(object = x)
   }
-  cat("survivalsvm version                :", 
-      paste(x$package.version, collapse = "."), "\n")
 }
 
 #' Print of object of class \code{RegFitObj}. \code{RegFitObj} is the class of models fitted using the regression approach of survival support vector machines.
@@ -48,6 +46,8 @@ printRegFitObj <- function(object, ...) {
   cat("Type of Kernel                     :", getType(getKernel(model)), "\n")
   cat("Optimization solver used           :", getOptMeth(model), "\n")
   cat("Number of support vectors retained :", nrow(getSV.RegFitObj(model)), "\n")
+  cat("survivalsvm version                :", 
+      paste(object$package.version, collapse = "."), "\n")
 }
 #' Print of object of class \code{RegFitObj}. \code{VB1FitObj} is the class of models fitted using the ranking approach of survival support vector machines.
 #'
@@ -71,6 +71,8 @@ printVB1FitObj <- function(object, ...) {
   cat("Method used to build 1NN differences   :", getType(getDifMat(model)), "\n")
   cat("Optimization solver used               :", getOptMeth(model), "\n")
   cat("Number of support vectors retained     :", n.sv, "\n")
+  cat("survivalsvm version                    :", 
+      paste(object$package.version, collapse = "."), "\n")
 }
 
 
@@ -96,6 +98,8 @@ printVB2FitObj <- function(object, ...) {
   cat("Method used to build 1NN differences   :", getType(getDifMat(model)), "\n")
   cat("Optimization solver used               :", getOptMeth(model), "\n")
   cat("Number of support vectors retained     :", n.sv, "\n")
+  cat("survivalsvm version                    :", 
+      paste(object$package.version, collapse = "."), "\n")
 }
 
 
@@ -121,6 +125,8 @@ printHybrid <- function(object, ...) {
   cat("Method used to build 1NN differences   :", getType(getDifMat(model)), "\n")
   cat("Optimization solver used               :", getOptMeth(model), "\n")
   cat("Number of support vectors retained     :", n.sv, "\n")
+  cat("survivalsvm version                    :", 
+      paste(object$package.version, collapse = "."), "\n")
 }
 
 #' Print objects of class \code{survivalsvm}.
