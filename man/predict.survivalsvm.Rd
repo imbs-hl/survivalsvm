@@ -37,7 +37,7 @@ Predictions of objects of class \code{survivalsvm}.
 require(survival)
 set.seed(123)
 n <- nrow(veteran)
-train.index <- sample(1:n, 120, replace = FALSE)
+train.index <- sample(1:n, 0.7*n, replace = FALSE)
 test.index <- setdiff(1:n, train.index)
 survsvm.reg <- survivalsvm(Surv(veteran$diagtime, veteran$status) ~ .,
                            subset = train.index, data = veteran,
