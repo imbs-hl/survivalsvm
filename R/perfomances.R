@@ -4,7 +4,7 @@
 #' @param obj [\code{survivalsvmprediction}]\cr
 #' Object of class \code{survivalsvmprediction}.
 #' @param Y [\code{vector}(1)]\cr
-#' A numeric vector of truth survival times obeserved.
+#' A \code{Surv()} object with true survival times observed.
 #'
 #' @export
 #' @return [\code{Integer}]
@@ -17,9 +17,12 @@ conindex <- function(obj, Y){
   if (is.null(obj$predicted)) {
     stop("Error: field 'predicted' not found in 'obj'.")
   }
+  if (!is.Surv(Y)) {
+    stop("Error: Y must be a Surv() object.")
+  }
   X <- obj$predicted
-  if (length(X) != length(Y)) {
-    stop("Error: lengths do not macht.")
+  if (length(X) != nrow(Y)) {
+    stop("Error: lengths do not match.")
   }
   ci = Hmisc::rcorr.cens(x = X, S = Y)
   return(ci["C Index"])

@@ -11,7 +11,7 @@ conindex(obj, Y)
 Object of class \code{survivalsvmprediction}.}
 
 \item{Y}{[\code{vector}(1)]\cr
-A numeric vector of truth survival times obeserved.}
+A \code{Surv()} object with true survival times observed.}
 }
 \value{
 [\code{Integer}]
