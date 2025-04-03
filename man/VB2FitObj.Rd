@@ -4,8 +4,13 @@
 \alias{VB2FitObj}
 \title{survivalsvm (ranking approach)}
 \usage{
-VB2FitObj(Alpha = NULL, Xtrain = NULL, DifMat = NULL, Kernel = NULL,
-  OptMeth = NULL)
+VB2FitObj(
+  Alpha = NULL,
+  Xtrain = NULL,
+  DifMat = NULL,
+  Kernel = NULL,
+  OptMeth = NULL
+)
 }
 \arguments{
 \item{Alpha}{[\code{vector(1)}]\cr

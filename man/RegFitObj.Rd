@@ -4,8 +4,7 @@
 \alias{RegFitObj}
 \title{survivalsvm (regression approach)}
 \usage{
-RegFitObj(Beta = NULL, SV = NULL, Kernel = NULL, OptMeth = NULL,
-  b0 = NULL)
+RegFitObj(Beta = NULL, SV = NULL, Kernel = NULL, OptMeth = NULL, b0 = NULL)
 }
 \arguments{
 \item{Beta}{[\code{vector(1)}]\cr

@@ -82,6 +82,9 @@
 #'    \code{OptMeth} \tab program used to solve the quadratic optimization problem.\cr
 #'  }
 #'
+#' @importFrom pracma quadprog
+#' @importFrom kernlab ipop
+#' 
 #' @author Cesaire J. K. Fouodo
 #' @keywords internal
 regFit <- function(X, Y, delta, meth_par = 1, kernel_type = "lin_kernel",

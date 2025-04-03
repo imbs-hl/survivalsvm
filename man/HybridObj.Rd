@@ -4,9 +4,17 @@
 \alias{HybridObj}
 \title{\code{HybridObj} (hybrid approach)}
 \usage{
-HybridObj(Alpha = NULL, Beta = NULL, Betastar = NULL, Delta = NULL,
-  Xtrain = NULL, DifMat = NULL, Kernel = NULL, OptMeth = NULL,
-  b0 = NULL)
+HybridObj(
+  Alpha = NULL,
+  Beta = NULL,
+  Betastar = NULL,
+  Delta = NULL,
+  Xtrain = NULL,
+  DifMat = NULL,
+  Kernel = NULL,
+  OptMeth = NULL,
+  b0 = NULL
+)
 }
 \arguments{
 \item{Alpha}{[\code{vector(1)}]\cr

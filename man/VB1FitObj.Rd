@@ -4,8 +4,13 @@
 \alias{VB1FitObj}
 \title{survivalsvm (ranking approach)}
 \usage{
-VB1FitObj(Alpha = NULL, Xtrain = NULL, DifMat = NULL, Kernel = NULL,
-  OptMeth = NULL)
+VB1FitObj(
+  Alpha = NULL,
+  Xtrain = NULL,
+  DifMat = NULL,
+  Kernel = NULL,
+  OptMeth = NULL
+)
 }
 \arguments{
 \item{Alpha}{[\code{vector(1)}]\cr

@@ -4,12 +4,27 @@
 \alias{survivalsvm}
 \title{survivalsvm}
 \usage{
-survivalsvm(formula = NULL, data = NULL, subset = NULL,
-  type = "regression", diff.meth = NULL, gamma.mu = NULL,
-  opt.meth = "quadprog", kernel = "lin_kernel", kernel.pars = NULL,
-  time.variable.name = NULL, status.variable.name = NULL, sgf.sv = 5,
-  sigf = 7, maxiter = 20, margin = 0.05, bound = 10, eig.tol = 1e-06,
-  conv.tol = 1e-07, posd.tol = 1e-08)
+survivalsvm(
+  formula = NULL,
+  data = NULL,
+  subset = NULL,
+  type = "regression",
+  diff.meth = NULL,
+  gamma.mu = NULL,
+  opt.meth = "quadprog",
+  kernel = "lin_kernel",
+  kernel.pars = NULL,
+  time.variable.name = NULL,
+  status.variable.name = NULL,
+  sgf.sv = 5,
+  sigf = 7,
+  maxiter = 20,
+  margin = 0.05,
+  bound = 10,
+  eig.tol = 1e-06,
+  conv.tol = 1e-07,
+  posd.tol = 1e-08
+)
 }
 \arguments{
 \item{formula}{[\code{formula(1)}]\cr
@@ -101,7 +116,7 @@ The following denotations are used for the models implemented:
    \item \code{'hybrid'}  combines simultaneously the regression and ranking constraints in the same model. Hybrid model is labeled
          \code{model2} by Van Belle et al. (2011b).
 
-}
+ }
 The argument \code{'type'} of the function \code{survivalsvm} is used to set the type of model to be fitted.
 For the models \code{vanbelle1}, \code{vanbelle2} and \code{hybrid}, differences between comparable
 pairs of observations are required. Each observation is compared with its nearest neighbor according to the survival time, and the

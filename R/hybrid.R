@@ -94,6 +94,8 @@
 #'    \code{OptMeth} \tab Program used to solve the quadratic optimization problem.\cr
 #'  }
 #'
+#' @importFrom pracma quadprog
+#' @importFrom kernlab ipop
 #' @keywords internal
 #' @author Cesaire J. K. Fouodo
 hybridFit <- function (X, Y, delta,
@@ -141,7 +143,7 @@ hybridFit <- function (X, Y, delta,
          maxiter = maxiter, margin = margin, bound = bound)
   }
   if(FALSE){
-    opt1 <- quadprog(C =  as.matrix(nearPD(H)$mat), d = c(-crossprod(t(Dc), Y), -Y, delta*Y),
+    opt1 <- pracma::quadprog(C =  as.matrix(nearPD(H)$mat), d = c(-crossprod(t(Dc), Y), -Y, delta*Y),
                      A = -diag(3*n - 1), b = rep(0, 3*n-1), lb = rep(0, 3*n-1), ub = c(rep(meth_par[1], n-1), rep(meth_par[2], 2*n)),
                      Aeq = c(rep(0, n-1), rep(-1, n), delta), beq = 0)
     opt2 <- kernlab::ipop(H = H, c = matrix(c(-crossprod(t(Dc), Y), -Y, delta*Y)), A = t(c(rep(0, n-1), rep(-1, n), delta)), b = 0,
@@ -326,6 +328,16 @@ setBetastar.HybridObj <- function(hybo, betastar) {
   hybo$Betarstar <- betastar
   return(hybo)
 }
+#' Creator of generic setor \code{setDelta}
+#'
+#' @param hybo [\code{Hybrid(1)}]\cr
+#' Object of class \code{Hybrid} taken in the argument.
+#' @param delta [\code{vector(1)}]\cr
+#' New value.
+#' 
+#' @return [\code{Hybrid(1)}]
+#' Modified version of the object taken in the argument.
+#' @keywords internal
 setDelta.HybridObj <- function(hybo, delta) {
   hybo$Delta <- delta
   return(hybo)

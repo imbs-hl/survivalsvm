@@ -4,11 +4,25 @@
 \alias{hybridFit}
 \title{survivalsvm (hybrid approach)}
 \usage{
-hybridFit(X, Y, delta, meth_par = c(1, 1), kernel_type = "lin_kernel",
-  kernel_pars = NA, bin_cat = integer(0), makediff = makediff3,
-  opt_alg = "quadprog", sgf_sv = 5, sigf = 7, maxiter = 40,
-  margin = 0.05, bound = 10, eig.tol = 1e-06, conv.tol = 1e-07,
-  posd.tol = 1e-08)
+hybridFit(
+  X,
+  Y,
+  delta,
+  meth_par = c(1, 1),
+  kernel_type = "lin_kernel",
+  kernel_pars = NA,
+  bin_cat = integer(0),
+  makediff = makediff3,
+  opt_alg = "quadprog",
+  sgf_sv = 5,
+  sigf = 7,
+  maxiter = 40,
+  margin = 0.05,
+  bound = 10,
+  eig.tol = 1e-06,
+  conv.tol = 1e-07,
+  posd.tol = 1e-08
+)
 }
 \arguments{
 \item{X}{[\code{matrix(1)}]\cr

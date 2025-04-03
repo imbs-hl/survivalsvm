@@ -117,6 +117,8 @@
 #' }
 #' @import survival
 #' @importFrom utils packageVersion
+#' @importFrom pracma quadprog
+#' @importFrom kernlab ipop
 survivalsvm <- function (formula = NULL, data = NULL, subset = NULL, type = "regression",
                         diff.meth = NULL, gamma.mu = NULL, opt.meth = "quadprog", kernel = "lin_kernel",
                         kernel.pars = NULL, time.variable.name = NULL, status.variable.name = NULL,

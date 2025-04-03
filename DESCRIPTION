@@ -1,10 +1,10 @@
 Package: survivalsvm
 Type: Package
 Title: Survival Support Vector Analysis
-Version: 0.0.5
+Version: 0.0.6
 Date: 2018-01-05
 Author: Cesaire J. K. Fouodo
-Maintainer: Cesaire Fouodo <fouodo@imbs.uni-luebeck.de>
+Maintainer: Cesaire Fouodo <cesaire.kuetefouodo@uni-luebeck.de>
 Description: Performs support vectors analysis for data sets with survival
     outcome. Three approaches are available in the package: The regression approach
     takes censoring into account when formulating the inequality constraints of
@@ -14,7 +14,6 @@ Description: Performs support vectors analysis for data sets with survival
     constraints in the same model.
 Imports:
     pracma,
-    quadprog,
     kernlab,
     Matrix,
     stats,
@@ -24,6 +23,7 @@ Suggests:
 Depends:
     survival
 License: GPL
-RoxygenNote: 6.0.1
+Encoding: UTF-8
+RoxygenNote: 7.3.2
 URL: https://github.com/imbs-hl/survivalsvm
 BugReports: https://github.com/imbs-hl/survivalsvm/issues

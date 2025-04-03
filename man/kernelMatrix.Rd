@@ -4,8 +4,13 @@
 \alias{kernelMatrix}
 \title{Kernel}
 \usage{
-kernelMatrix(Xtrain, kernel_type = "lin_kernel", kernel_pars, Xt = NULL,
-  bin_cat = integer(0))
+kernelMatrix(
+  Xtrain,
+  kernel_type = "lin_kernel",
+  kernel_pars,
+  Xt = NULL,
+  bin_cat = integer(0)
+)
 }
 \arguments{
 \item{Xtrain}{[\code{matrix(1)}]\cr

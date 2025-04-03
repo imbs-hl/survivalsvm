@@ -95,6 +95,8 @@
 #'
 #' @author Cesaire J. K. Fouodo
 #' @keywords internal
+#' @importFrom pracma quadprog
+#' @importFrom kernlab ipop
 vanbelle1Fit <- function (X, Y, delta,
                         meth_par = 1, kernel_type = "lin_kernel",
                         kernel_pars = NA, bin_cat = integer(0),
