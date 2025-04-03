@@ -17,6 +17,7 @@ Description: Performs support vectors analysis for data sets with survival
     constraints in the same model.
 Imports:
     pracma,
+    quadprog,
     kernlab,
     Matrix,
     stats,
