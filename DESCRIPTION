@@ -2,9 +2,12 @@ Package: survivalsvm
 Type: Package
 Title: Survival Support Vector Analysis
 Version: 0.0.6
-Date: 2018-01-05
-Author: Cesaire J. K. Fouodo
-Maintainer: Cesaire Fouodo <cesaire.kuetefouodo@uni-luebeck.de>
+Date: 2025-04-03
+Authors@R: c(person(given = c("Cesaire", "J."),
+                      family = c("K.", "Fouodo"),
+                      role = c("aut", "cre"),
+                      email = "cesaire.kuetefouodo@uni-luebeck.de")
+            )
 Description: Performs support vectors analysis for data sets with survival
     outcome. Three approaches are available in the package: The regression approach
     takes censoring into account when formulating the inequality constraints of
