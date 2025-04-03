@@ -17,13 +17,13 @@ Description: Performs support vectors analysis for data sets with survival
     constraints in the same model.
 Imports:
     pracma,
-    quadprog,
     kernlab,
     Matrix,
     stats,
     Hmisc
 Suggests:
-    testthat
+    testthat,
+    quadprog
 Depends:
     survival
 License: GPL
