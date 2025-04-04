@@ -4,10 +4,10 @@
 \alias{setBeta.HybridObj}
 \title{\code{Hybrid} (hybrid approach)}
 \usage{
-\method{setBeta}{HybridObj}(hybo, beta)
+\method{setBeta}{HybridObj}(rfo, beta)
 }
 \arguments{
-\item{hybo}{[\code{Hybrid(1)}]\cr
+\item{rfo}{[\code{Hybrid(1)}]\cr
 Object of class \code{Hybrid} taken in the argument.}
 
 \item{beta}{[\code{vector(1)}]\cr

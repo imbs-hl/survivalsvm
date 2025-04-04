@@ -4,13 +4,13 @@
 \alias{setKernel.default}
 \title{\code{RegFitObj} (regression approach)}
 \usage{
-\method{setKernel}{default}(rfo, Kernel)
+\method{setKernel}{default}(rfo, kernel)
 }
 \arguments{
 \item{rfo}{[\code{RegFitObj}(1)]\cr
 object taken in the argument.}
 
-\item{Kernel}{[\code{\link{Kernel}(1)}]\cr
+\item{kernel}{[\code{\link{Kernel}(1)}]\cr
 new object of class \code{Kernel}.}
 }
 \value{

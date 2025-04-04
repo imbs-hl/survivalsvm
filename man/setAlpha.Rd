@@ -4,13 +4,13 @@
 \alias{setAlpha}
 \title{\code{VB1FitObj} (ranking approach)}
 \usage{
-setAlpha(vb1o, beta)
+setAlpha(vb1o, alpha)
 }
 \arguments{
 \item{vb1o}{[\code{VB1FitObj}]\cr
 Object taken in the argument.}
 
-\item{beta}{[\code{vector(1)}]\cr
+\item{alpha}{[\code{vector(1)}]\cr
 New value}
 }
 \description{

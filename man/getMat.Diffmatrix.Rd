@@ -4,10 +4,10 @@
 \alias{getMat.Diffmatrix}
 \title{\code{Diffmatrix}.}
 \usage{
-\method{getMat}{Diffmatrix}(dm)
+\method{getMat}{Diffmatrix}(obj)
 }
 \arguments{
-\item{dm}{[\code{\link{Diffmatrix}(1)}]\cr
+\item{obj}{[\code{\link{Diffmatrix}(1)}]\cr
 Object of class \code{Diffmatrix}.}
 }
 \value{

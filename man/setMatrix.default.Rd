@@ -4,13 +4,13 @@
 \alias{setMatrix.default}
 \title{\code{Kernel}}
 \usage{
-setMatrix.default(kern, kernmatrix)
+setMatrix.default(obj, mat)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{Object(1)}]\cr
 Object taken in the argument.}
 
-\item{kernmatrix}{[\code{matrix(1)}]\cr
+\item{mat}{[\code{matrix(1)}]\cr
 New matrix.}
 }
 \value{

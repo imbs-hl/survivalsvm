@@ -4,13 +4,13 @@
 \alias{setType.Kernel}
 \title{\code{Kernel}}
 \usage{
-\method{setType}{Kernel}(kern, kerntype)
+\method{setType}{Kernel}(obj, type)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{\link{Kernel}(1)}]\cr
 Object taken in the argument.}
 
-\item{kerntype}{[\code{character(1)}]\cr
+\item{type}{[\code{character(1)}]\cr
 Kerntype new type.}
 }
 \value{

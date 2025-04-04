@@ -4,13 +4,13 @@
 \alias{setMat.Diffmatrix}
 \title{\code{Diffmatrix}.}
 \usage{
-\method{setMat}{Diffmatrix}(dm, dmmat)
+\method{setMat}{Diffmatrix}(obj, mat)
 }
 \arguments{
-\item{dm}{[\code{\link{Diffmatrix}(1)}]\cr
+\item{obj}{[\code{\link{Diffmatrix}(1)}]\cr
 Object of class \code{Diffmatrix}.}
 
-\item{dmmat}{[\code{matrix(1)}]\cr
+\item{mat}{[\code{matrix(1)}]\cr
 Matrix used to perform differences between comparable data points.}
 }
 \value{

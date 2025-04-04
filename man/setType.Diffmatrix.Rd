@@ -4,13 +4,13 @@
 \alias{setType.Diffmatrix}
 \title{\code{Diffmatrix}}
 \usage{
-\method{setType}{Diffmatrix}(dm, dmtype)
+\method{setType}{Diffmatrix}(obj, type)
 }
 \arguments{
-\item{dm}{[\code{\link{Diffmatrix}(1)}]\cr
+\item{obj}{[\code{\link{Diffmatrix}(1)}]\cr
 Object of class \code{Diffmatrix}.}
 
-\item{dmtype}{[\code{character(1)}]\cr
+\item{type}{[\code{character(1)}]\cr
 New type}
 }
 \value{

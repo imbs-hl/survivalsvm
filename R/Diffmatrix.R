@@ -182,19 +182,18 @@ Diffmatrix <- function(Type = NULL, Mat = NULL) {
 #'
 #'
 #' @title \code{Diffmatrix}
-#' @param dm [\code{\link{Diffmatrix}(1)}]\cr
+#' @param obj [\code{\link{Diffmatrix}(1)}]\cr
 #' Object of class \code{Diffmatrix}.
-#' @param dmtype [\code{character(1)}]\cr
+#' @param type [\code{character(1)}]\cr
 #'  New type
 #'
 #' @return [\code{\link{Diffmatrix}(1)}]
 #' Mutated object of class \code{Diffmatrix} containing elements.
 #'
 #' @keywords internal
-#'
-setType.Diffmatrix <- function(dm, dmtype) {
-  dm$Type <- dmtype
-  return(dm)
+setType.Diffmatrix <- function(obj, type) {
+  obj$Type <- type
+  return(obj)
 }
 
 #--- Specific mutator method for the \code{Diffmatrix} matrix
@@ -202,9 +201,9 @@ setType.Diffmatrix <- function(dm, dmtype) {
 #'
 #'
 #' @title \code{Diffmatrix}.
-#' @param dm [\code{\link{Diffmatrix}(1)}]\cr
+#' @param obj [\code{\link{Diffmatrix}(1)}]\cr
 #' Object of class \code{Diffmatrix}.
-#' @param dmmat  [\code{matrix(1)}]\cr
+#' @param mat  [\code{matrix(1)}]\cr
 #' Matrix used to perform differences between comparable data points.
 #' @return [\code{\link{Diffmatrix}(1)}]
 #' Mutated object of class \code{Diffmatrix} containing elements:
@@ -212,36 +211,35 @@ setType.Diffmatrix <- function(dm, dmtype) {
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-setMat.Diffmatrix <- function(dm, dmmat) {
-  dm$Mat <- dmmat
-  return(dm)
+setMat.Diffmatrix <- function(obj, mat) {
+  obj$Mat <- mat
+  return(obj)
 }
-
-#>>>> Mutators for the kernel object
 
 #' Mutator for objects of class \code{Diffmatrix}.
 #'
 #'
 #' @title \code{Diffmatrix}.
-#' @param dm [\code{\link{Diffmatrix}(1)}]\cr
+#' @param obj [\code{\link{Diffmatrix}(1)}]\cr
 #' Object of class \code{Diffmatrix}.
 #'
-#' @return [\code{character(1)}]
+#' @return [\code{character(1)}]\cr
 #' Type of Diffmatrix
 #' @keywords internal
-getType.Diffmatrix <- function(dm) {
-  return(dm$Type)
+#' @export
+getType.Diffmatrix <- function(obj) {
+  return(obj$Type)
 }
 
 #' To get the matrix used to perform differences between comparable data points for object of class Diffmatrix.
 #'
 #'
 #' @title \code{Diffmatrix}.
-#' @param dm [\code{\link{Diffmatrix}(1)}]\cr
+#' @param obj [\code{\link{Diffmatrix}(1)}]\cr
 #' Object of class \code{Diffmatrix}.
 #'
 #' @return The matrix used to perform differences between comparable data points.
 #' @keywords internal
-getMat.Diffmatrix <- function(dm) {
-  return(dm$Mat)
+getMat.Diffmatrix <- function(obj) {
+  return(obj$Mat)
 }

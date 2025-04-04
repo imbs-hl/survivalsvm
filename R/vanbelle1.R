@@ -63,23 +63,23 @@
 #' String indicating which of \code{'makediff1'}, \code{'makediff2'} or \code{'makediff3'}
 #' will be used.
 #' @param opt_alg [\code{vector(1)}]\cr
-#' Program that will be used to solve the quadratic optimization problem. Either \code{\link{quadprog}} or \code{\link{ipop}}.
+#' Program that will be used to solve the quadratic optimization problem. Either \code{\link[pracma]{quadprog}} or \code{\link[kernlab]{ipop}}.
 #' @param sgf_sv [\code{integer(1)}]\cr
 #' Number of decimal digits in the solution of the quadratic optimization problem.
 #' @param sigf [\code{integer(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param maxiter [\code{integer(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param margin [\code{numeric(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param bound [\code{numeric(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param eig.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param conv.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param posd.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #'
 #' @export
 #' @return [\code{VB1FitObj(1)}]
@@ -178,12 +178,12 @@ VB1FitObj <- function(Alpha = NULL, Xtrain = NULL, DifMat = NULL, Kernel = NULL,
 #' @title \code{VB1FitObj} (ranking approach)
 #' @param vb1o [\code{VB1FitObj}]\cr
 #' Object taken in the argument.
-#' @param beta [\code{vector(1)}]\cr
+#' @param alpha [\code{vector(1)}]\cr
 #' New value
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-setAlpha <- function(vb1o, beta) {
+setAlpha <- function(vb1o, alpha) {
   UseMethod("setAlpha", vb1o)
 }
 #' Creator of the generic mutator \code{setXtrain}.
@@ -250,7 +250,7 @@ getXtrain <- function(vb1o) {
 getDifMat <- function(vb1o) {
   UseMethod("getDifMat", vb1o)
 }
-#>>>> Mutators for the kernel object
+# Mutators for the kernel object
 #' Default mutator of the field \code{Alpha} of the object taken in an argument.
 #'
 #'
@@ -394,7 +394,7 @@ setDifMat.VB1FitObj <- function(vb1o, dm) {
 #'
 #'
 #' @title \code{VB1FitObj} (ranking approach)
-#' @param vb1o [\code{VB1FitObj}]\cr
+#' @param rfo [\code{VB1FitObj}]\cr
 #' Object of class \code{RegFitObj} taken in the argument.
 #' @param kernel [\code{\link{Diffmatrix}(1)}]\cr
 #' New object of class \code{Kernel}.
@@ -402,25 +402,26 @@ setDifMat.VB1FitObj <- function(vb1o, dm) {
 #' @return [\code{VB1FitObj}]
 #' Modified version of the object taken in the argument.
 #' @keywords internal
-setKernel.VB1FitObj <- function(vb1o, kernel) {
-  vb1o$Beta <- kernel
-  return(vb1o)
+setKernel.VB1FitObj <- function(rfo, kernel) {
+  rfo$Beta <- kernel
+  return(rfo)
 }
 #' Default mutator of the field \code{OptMeth} of the object taken in an argument.
 #'
 #'
 #' @title \code{VB1FitObj} (ranking approach)
-#' @param vb1o [\code{VB1FitObj}]\cr
+#' @param rfo [\code{VB1FitObj}]\cr
 #' Object of class \code{RegFitObj} taken in the argument.
 #' @param optmeth [\code{character(1)}]\cr
 #' New value
 #'
+#' @keywords internal
 #' @return [\code{VB1FitObj}]
 #' Modified version of the object taken in the argument.
-#' @keywords internal
-setOptMeth.VB1FitObj <- function(vb1o, optmeth) {
-  vb1o$OptMeth <- optmeth
-  return(vb1o)
+#' @export
+setOptMeth.VB1FitObj <- function(rfo, optmeth) {
+  rfo$OptMeth <- optmeth
+  return(rfo)
 }
 #' Creator of the generic accessor \code{Beta}.
 #'
@@ -468,27 +469,27 @@ getDifMat.VB1FitObj <- function(vb1o) {
 #'
 #'
 #' @title \code{VB1FitObj} (ranking approach)
-#' @param vb1o [\code{VB1FitObj}]\cr
+#' @param rfo [\code{VB1FitObj}]\cr
 #' Object taken in argument.
 #' @return Kernel [\code{\link{Kernel}(1)}]
 #' Field of the object of class \code{VB1FitObj} taken in the argument.
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-getKernel.VB1FitObj <- function(vb1o) {
-  return(vb1o$Kernel)
+getKernel.VB1FitObj <- function(rfo) {
+  return(rfo$Kernel)
 }
 #' access to the method in \code{OptMeth} field.
 #'
 #'
 #' @title \code{VB1FitObj} (ranking approach)
-#' @param vb1o [\code{VB1FitObj}]\cr
+#' @param rfo [\code{VB1FitObj}]\cr
 #' Object taken in argument.
 #' @return [\code{character(1)}]
 #' OptMeth field of the object of class \code{VB1FitObj} taken in the argument.
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-getOptMeth.VB1FitObj <- function(vb1o) {
-  return(vb1o$OptMeth)
+getOptMeth.VB1FitObj <- function(rfo) {
+  return(rfo$OptMeth)
 }

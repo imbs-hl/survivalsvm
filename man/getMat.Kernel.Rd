@@ -4,10 +4,10 @@
 \alias{getMat.Kernel}
 \title{\code{Kernel}}
 \usage{
-\method{getMat}{Kernel}(kern)
+\method{getMat}{Kernel}(obj)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{\link{Kernel}(1)}]\cr
 Object of class \code{Kernel}.}
 }
 \value{

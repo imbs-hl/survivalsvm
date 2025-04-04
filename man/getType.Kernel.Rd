@@ -4,10 +4,10 @@
 \alias{getType.Kernel}
 \title{\code{Kernel}}
 \usage{
-\method{getType}{Kernel}(kern)
+\method{getType}{Kernel}(obj)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{\link{Kernel}(1)}]\cr
 Object of class \code{Kernel}.}
 }
 \value{

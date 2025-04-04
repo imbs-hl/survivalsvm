@@ -4,13 +4,13 @@
 \alias{setType}
 \title{Class \code{Kernel}}
 \usage{
-setType(kern, value)
+setType(obj, type)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{\link{Kernel}(1)}]\cr
 Object taken in the argument.}
 
-\item{value}{[\code{character(1)}]\cr
+\item{type}{[\code{character(1)}]\cr
 New type.}
 }
 \description{

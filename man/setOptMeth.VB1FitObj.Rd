@@ -4,10 +4,10 @@
 \alias{setOptMeth.VB1FitObj}
 \title{\code{VB1FitObj} (ranking approach)}
 \usage{
-\method{setOptMeth}{VB1FitObj}(vb1o, optmeth)
+\method{setOptMeth}{VB1FitObj}(rfo, optmeth)
 }
 \arguments{
-\item{vb1o}{[\code{VB1FitObj}]\cr
+\item{rfo}{[\code{VB1FitObj}]\cr
 Object of class \code{RegFitObj} taken in the argument.}
 
 \item{optmeth}{[\code{character(1)}]\cr

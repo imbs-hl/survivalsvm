@@ -52,31 +52,31 @@ String indicating which of \code{'makediff1'}, \code{'makediff2'} or \code{'make
 will be used.}
 
 \item{opt_alg}{[\code{character}]\cr
-Program that will be used to solve the quadratic optimization problem. Either \code{\link{quadprog}} or \code{\link{ipop}}.}
+Program that will be used to solve the quadratic optimization problem. Either \code{\link[pracma]{quadprog}} or \code{\link[kernlab]{ipop}}.}
 
 \item{sgf_sv}{[\code{integer(1)}]\cr
 Number of decimal digits in the solution of the quadratic optimization problem.}
 
 \item{sigf}{[\code{integer(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{maxiter}{[\code{inter(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{margin}{[\code{numeric(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{bound}{[\code{numeric(1)}]\cr
-Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.}
+Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.}
 
 \item{eig.tol}{[\code{numeric(1)}]\cr
-Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 
 \item{conv.tol}{[\code{numeric(1)}]\cr
-Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 
 \item{posd.tol}{[\code{numeric(1)}]\cr
-Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 }
 \value{
 [\code{VB2FitObj(1)}]

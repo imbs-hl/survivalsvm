@@ -21,14 +21,14 @@
 #' three possible comparison approaches \link{makediff1}, \link{makediff2} and \link{makediff3} are offered to compute the
 #' differences between comparable neighbors.
 #'
-#' The current version of \code{survivalsvm} uses the solvers \code{\link{ipop}} and \code{\link{quadprog}} to solve the dual
+#' The current version of \code{survivalsvm} uses the solvers \code{\link[kernlab]{ipop}} and \code{\link[pracma]{quadprog}} to solve the dual
 #' optimization problems deduced from the suport vector formulations of the models presented above. Notice that for using \code{quadprog}
 #' the kernel matrix needs to be symmetric and positive definite. Therefore when the conditions are not met, the kernel matrix needs be slightly perturbed to obtain the nearest positive definite kernel matrix.
 #' The alternative to \code{quadprog} is \code{ipop}, that can also handle a non-negative definite kernel matrix, however more time may be
 #' required to solve the quadratic optimization dual problem. The argument \code{opt.meth} is used to select the solver.
 #'
 #' The \code{survivalsvm} command can be called giving a formula, in which the survival time and the status are grouped into a
-#' two colunm matrix using the command \code{\link{Surv}} from the package \code{survival}. An alternative is to pass the data
+#' two colunm matrix using the command \code{\link[survival]{Surv}} from the package \code{survival}. An alternative is to pass the data
 #' frame of training data points as an argument using \code{data}, to mention the name of the survival time variable and
 #' the name of the status variable as illustrated in the third example below.
 #'
@@ -49,7 +49,7 @@
 #' Parameters of regularization. Note that a vector with two parameters is required in case of \code{hybrid} approach. Just
 #' one value is required in case of \code{regression}, \code{vanbelle1} or \code{vanbelle2}.
 #' @param opt.meth [\code{character(1)}]\cr
-#' Program used to solve the quadratic optimization problem. Either "\code{\link{quadprog}}" or "\code{\link{ipop}}".
+#' Program used to solve the quadratic optimization problem. Either "\code{\link[pracma]{quadprog}}" or "\code{\link[kernlab]{ipop}}".
 #' @param kernel [\code{\link{Kernel}(1)}]\cr
 #' Kernel used to fit the model: linear kern ('lin_kernel'), additive kernel ('add_kernel'),
 #' radial basis kernels ('rbf_kernel') and the polynomial kernel ('poly_kernel').
@@ -62,19 +62,19 @@
 #' @param sgf.sv [\code{character(1)}]\cr
 #' Number of decimal digits in the solution of the quadratic optimization problem.
 #' @param sigf [\code{numeric(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param maxiter [\code{integer(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param margin [\code{numeric(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param bound [\code{numeric(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param eig.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param conv.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param posd.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #'
 #' @return \code{survivalsvm}
 #' Object of class \code{survivalsvm}, with elements:

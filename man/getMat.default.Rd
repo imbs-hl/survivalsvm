@@ -4,10 +4,10 @@
 \alias{getMat.default}
 \title{\code{Kernel}}
 \usage{
-\method{getMat}{default}(kern)
+\method{getMat}{default}(obj)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{\link{Kernel}(1)}]\cr
 Object taken in the argument.}
 }
 \value{

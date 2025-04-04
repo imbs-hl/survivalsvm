@@ -46,31 +46,31 @@ parameter of kernel.}
 indexes of binary/categorial variables.}
 
 \item{opt_alg}{[\code{character(1)}]\cr
-program used to solve the optimization problem. This most be one of the two possibilities \code{\link{quadprog}} or \code{\link{ipop}}.}
+program used to solve the optimization problem. This most be one of the two possibilities \code{\link[pracma]{quadprog}} or \code{\link[kernlab]{ipop}}.}
 
 \item{sgf_sv}{[\code{integer(1)}]\cr
 number of digits to be retained in the solution.}
 
 \item{sigf}{[\code{integer(1)}]\cr
-used by \code{ipop}. See \code{\link{ipop}} for more details.}
+used by \code{ipop}. See \code{\link[kernlab]{ipop}} for more details.}
 
 \item{maxiter}{[\code{integer(1)}]\cr
-used by \code{ipop}. See \code{\link{ipop}} for more details.}
+used by \code{ipop}. See \code{\link[kernlab]{ipop}} for more details.}
 
 \item{margin}{[\code{numeric(1)}]\cr
-used by \code{ipop}. See \code{\link{ipop}} for more details.}
+used by \code{ipop}. See \code{\link[kernlab]{ipop}} for more details.}
 
 \item{bound}{[\code{numeric(1)}]\cr
-used by \code{ipop}. See \code{\link{ipop}} for more details.}
+used by \code{ipop}. See \code{\link[kernlab]{ipop}} for more details.}
 
 \item{eig.tol}{[\code{numeric(1)}]\cr
-used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 
 \item{conv.tol}{[\code{numeric(1)}]\cr
-used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 
 \item{posd.tol}{[\code{numeric(1)}]\cr
-used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.}
+used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.}
 }
 \value{
 [\code{\link{RegFitObj}(1)}]

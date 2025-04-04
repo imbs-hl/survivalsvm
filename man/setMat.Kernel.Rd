@@ -4,13 +4,13 @@
 \alias{setMat.Kernel}
 \title{\code{Kernel}}
 \usage{
-\method{setMat}{Kernel}(kern, kernmat)
+\method{setMat}{Kernel}(obj, mat)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{\link{Kernel}(1)}]\cr
 Object of class \code{Kernel} taken in the argument.}
 
-\item{kernmat}{[\code{matrix(1)}]\cr
+\item{mat}{[\code{matrix(1)}]\cr
 New kernel matrix.}
 }
 \value{

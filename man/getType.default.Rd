@@ -2,12 +2,12 @@
 % Please edit documentation in R/kernels.R
 \name{getType.default}
 \alias{getType.default}
-\title{\code{Kernel}}
+\title{Default method of getType.}
 \usage{
-\method{getType}{default}(kern)
+\method{getType}{default}(obj)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{Object(1)}]\cr
 Object taken in argument.}
 }
 \value{

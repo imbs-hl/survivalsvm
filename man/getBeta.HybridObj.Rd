@@ -4,10 +4,10 @@
 \alias{getBeta.HybridObj}
 \title{\code{Hybrid} (hybrid approach)}
 \usage{
-\method{getBeta}{HybridObj}(hybo)
+\method{getBeta}{HybridObj}(rfo)
 }
 \arguments{
-\item{hybo}{[\code{Hybrid(1)}]\cr
+\item{rfo}{[\code{Hybrid(1)}]\cr
 Object taken in the argument.}
 }
 \value{

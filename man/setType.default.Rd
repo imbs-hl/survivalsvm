@@ -4,13 +4,13 @@
 \alias{setType.default}
 \title{Class \code{Kernel}}
 \usage{
-\method{setType}{default}(kern, value)
+\method{setType}{default}(obj, type)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{Object(1)}]\cr
 Object taken in the argument.}
 
-\item{value}{[\code{character(1)}]\cr
+\item{type}{[\code{character(1)}]\cr
 New type.}
 }
 \value{

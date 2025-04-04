@@ -4,14 +4,14 @@
 \alias{getType.Diffmatrix}
 \title{\code{Diffmatrix}.}
 \usage{
-\method{getType}{Diffmatrix}(dm)
+\method{getType}{Diffmatrix}(obj)
 }
 \arguments{
-\item{dm}{[\code{\link{Diffmatrix}(1)}]\cr
+\item{obj}{[\code{\link{Diffmatrix}(1)}]\cr
 Object of class \code{Diffmatrix}.}
 }
 \value{
-[\code{character(1)}]
+[\code{character(1)}]\cr
 Type of Diffmatrix
 }
 \description{

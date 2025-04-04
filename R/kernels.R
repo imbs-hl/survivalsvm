@@ -150,15 +150,15 @@ Kernel <- function(Type = NULL, Mat = NULL, Kernpar = NULL, bincat = NULL){
 #'
 #'
 #' @title Class \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{\link{Kernel}(1)}]\cr
 #' Object taken in the argument.
-#' @param value [\code{character(1)}]\cr
+#' @param type [\code{character(1)}]\cr
 #' New type.
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-setType <- function(kern, value) {
-  UseMethod("setType", kern)
+setType <- function(obj, type) {
+  UseMethod("setType", obj)
 }
 
 #>>>> Mutators for the kernel object
@@ -168,9 +168,9 @@ setType <- function(kern, value) {
 #'
 #'
 #' @title Class \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{Object(1)}]\cr
 #' Object taken in the argument.
-#' @param value [\code{character(1)}]\cr
+#' @param type [\code{character(1)}]\cr
 #' New type.
 #'
 #' @return Object taken in the argument.
@@ -178,8 +178,8 @@ setType <- function(kern, value) {
 #' @author Cesaire J. K. Fouodo
 #'
 #' @keywords internal
-setType.default <- function(kern, value) {
-  return(kern)
+setType.default <- function(obj, type) {
+  return(obj)
 }
 
 #--- Specific mutator method for the kernel type
@@ -187,9 +187,9 @@ setType.default <- function(kern, value) {
 #'
 #'
 #' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{\link{Kernel}(1)}]\cr
 #' Object taken in the argument.
-#' @param kerntype [\code{character(1)}]\cr
+#' @param type [\code{character(1)}]\cr
 #' Kerntype new type.
 #'
 #' @return Object of class \code{Kernel} with elements:
@@ -197,9 +197,9 @@ setType.default <- function(kern, value) {
 #' @author Cesaire J. K. Fouodo
 #'
 #' @keywords internal
-setType.Kernel <- function(kern, kerntype) {
-  kern$Type <- kerntype
-  return(kern)
+setType.Kernel <- function(obj, type) {
+  obj$Type <- type
+  return(obj)
 }
 
 #--- Generic mutator method for the kernel matrix
@@ -207,32 +207,32 @@ setType.Kernel <- function(kern, kerntype) {
 #'
 #'
 #' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{Object(1)}]\cr
 #' Object taken in the argument.
 #' @param mat [\code{matrix(1)}]\cr
 #' New matrix.
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-setMat <- function(kern, mat) {
-  UseMethod("setMat", kern)
+setMat <- function(obj, mat) {
+  UseMethod("setMat", obj)
 }
 #--- Default mutator method for the kernel matrix
 #' Mutator of the field \code{Mat} of the object taken in an argument.
 #'
 #'
 #' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{Object(1)}]\cr
 #' Object taken in the argument.
-#' @param kernmatrix [\code{matrix(1)}]\cr
+#' @param mat [\code{matrix(1)}]\cr
 #' New matrix.
 #'
 #' @return The object taken in the argument.
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-setMatrix.default <- function(kern, kernmatrix) {
-  return(kern)
+setMatrix.default <- function(obj, mat) {
+  return(obj)
 }
 
 #--- Specific mutator method for the kernel matrix
@@ -240,9 +240,9 @@ setMatrix.default <- function(kern, kernmatrix) {
 #'
 #'
 #' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{\link{Kernel}(1)}]\cr
 #' Object of class \code{Kernel} taken in the argument.
-#' @param kernmat [\code{matrix(1)}]\cr
+#' @param mat [\code{matrix(1)}]\cr
 #' New kernel matrix.
 #'
 #' @return [\code{\link{Kernel}(1)}]
@@ -257,9 +257,9 @@ setMatrix.default <- function(kern, kernmatrix) {
 #' @author Cesaire J. K. Fouodo
 #'
 #' @keywords internal
-setMat.Kernel<-function(kern, kernmat) {
-  kern$Mat <- kernmat
-  return(kern)
+setMat.Kernel<-function(obj, mat) {
+  obj$Mat <- mat
+  return(obj)
 }
 
 #--- Generic mutator method for the kernel parameter
@@ -343,6 +343,7 @@ setKernpar.Kernel<-function(kern, kernpar) {
 #' @author Cesaire J. K. Fouodo
 #'
 #' @keywords internal
+#' @export
 setBincat <- function(kern, bincat) {
   UseMethod("setMat", bincat)
 }
@@ -395,55 +396,50 @@ setBincat.Kernel<-function(kern, bincat) {
 }
 
 
-#>>>> Accessors for the kernel object
-
-#--- Generic accessor method for the kernel type
-#-----------------------------------------------
 #' Creator of the generic accessor \code{getType}.
 #'
 #'
-#' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @title Get the type of current object.
+#' @param obj [\code{Object(1)}]\cr
 #' Object taken in the argument.
 #' @keywords internal
+#' @export
 #'
 #' @author Cesaire J. K. Fouodo
-getType <- function(kern) {
-  UseMethod("getType", kern)
+getType <- function(obj) {
+  UseMethod("getType", obj)
 }
 
-#--- Default accessor method for the kernel type
-#-----------------------------------------------
 #' Accessor for the field \code{Type} for the object taken in the argument.
 #'
 #'
-#' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @title Default method of getType.
+#' @param obj [\code{Object(1)}]\cr
 #' Object taken in argument.
 #'
 #' @return \code{NULL}.
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-getType.default <- function(kern) {
+#' @export
+getType.default <- function(obj) {
   return(NULL)
 }
 
-#--- Specific accessor method for the kernel type
-#------------------------------------------------
 #' Accessor for the field \code{Type} of the object of class \code{Kernel} taken in an argument.
 #'
 #'
 #' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{\link{Kernel}(1)}]\cr
 #' Object of class \code{Kernel}.
 #'
 #' @return Type of the kernel taken in the argument.
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-getType.Kernel <- function(kern) {
-  return(kern$Type)
+#' @export
+getType.Kernel <- function(obj) {
+  return(obj$Type)
 }
 
 #--- Generic accessor method for the kernel matrix
@@ -452,13 +448,13 @@ getType.Kernel <- function(kern) {
 #'
 #'
 #' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{Object(1)}]\cr
 #' Object taken in the argument.
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-getMat <- function(kern) {
-  UseMethod("getMat", kern)
+getMat <- function(obj) {
+  UseMethod("getMat", obj)
 }
 #--- Default accessor method for the kernel matrix
 #-----------------------------------------------
@@ -466,7 +462,7 @@ getMat <- function(kern) {
 #'
 #'
 #' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{\link{Kernel}(1)}]\cr
 #' Object taken in the argument.
 #'
 #' @return \code{NULL}.
@@ -474,7 +470,7 @@ getMat <- function(kern) {
 #'
 #'
 #' @author Cesaire J. K. Fouodo
-getMat.default <- function(kern) {
+getMat.default <- function(obj) {
   return(NULL)
 }
 
@@ -484,7 +480,7 @@ getMat.default <- function(kern) {
 #'
 #'
 #' @title \code{Kernel}
-#' @param kern [\code{\link{Kernel}(1)}]\cr
+#' @param obj [\code{\link{Kernel}(1)}]\cr
 #' Object of class \code{Kernel}.
 #'
 #' @return [\code{matrix(1)}]
@@ -492,8 +488,8 @@ getMat.default <- function(kern) {
 #'
 #' @keywords internal
 #' @author Cesaire J. K. Fouodo
-getMat.Kernel<-function(kern) {
-  return(kern$Mat)
+getMat.Kernel<-function(obj) {
+  return(obj$Mat)
 }
 
 #--- Generic accessor method for the kernel parameter

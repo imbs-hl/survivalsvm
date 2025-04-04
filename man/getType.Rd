@@ -2,12 +2,12 @@
 % Please edit documentation in R/kernels.R
 \name{getType}
 \alias{getType}
-\title{\code{Kernel}}
+\title{Get the type of current object.}
 \usage{
-getType(kern)
+getType(obj)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{Object(1)}]\cr
 Object taken in the argument.}
 }
 \description{

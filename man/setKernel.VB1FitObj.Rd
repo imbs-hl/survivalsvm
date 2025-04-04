@@ -4,10 +4,10 @@
 \alias{setKernel.VB1FitObj}
 \title{\code{VB1FitObj} (ranking approach)}
 \usage{
-\method{setKernel}{VB1FitObj}(vb1o, kernel)
+\method{setKernel}{VB1FitObj}(rfo, kernel)
 }
 \arguments{
-\item{vb1o}{[\code{VB1FitObj}]\cr
+\item{rfo}{[\code{VB1FitObj}]\cr
 Object of class \code{RegFitObj} taken in the argument.}
 
 \item{kernel}{[\code{\link{Diffmatrix}(1)}]\cr

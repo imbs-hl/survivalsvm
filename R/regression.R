@@ -53,23 +53,23 @@
 #' @param bin_cat [\code{vector(1)}]\cr
 #' indexes of binary/categorial variables.
 #' @param opt_alg [\code{character(1)}]\cr
-#' program used to solve the optimization problem. This most be one of the two possibilities \code{\link{quadprog}} or \code{\link{ipop}}.
+#' program used to solve the optimization problem. This most be one of the two possibilities \code{\link[pracma]{quadprog}} or \code{\link[kernlab]{ipop}}.
 #' @param sgf_sv [\code{integer(1)}]\cr
 #' number of digits to be retained in the solution.
 #' @param sigf [\code{integer(1)}]\cr
-#' used by \code{ipop}. See \code{\link{ipop}} for more details.
+#' used by \code{ipop}. See \code{\link[kernlab]{ipop}} for more details.
 #' @param maxiter [\code{integer(1)}]\cr
-#' used by \code{ipop}. See \code{\link{ipop}} for more details.
+#' used by \code{ipop}. See \code{\link[kernlab]{ipop}} for more details.
 #' @param margin [\code{numeric(1)}]\cr
-#' used by \code{ipop}. See \code{\link{ipop}} for more details.
+#' used by \code{ipop}. See \code{\link[kernlab]{ipop}} for more details.
 #' @param bound [\code{numeric(1)}]\cr
-#' used by \code{ipop}. See \code{\link{ipop}} for more details.
+#' used by \code{ipop}. See \code{\link[kernlab]{ipop}} for more details.
 #' @param eig.tol [\code{numeric(1)}]\cr
-#' used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param conv.tol [\code{numeric(1)}]\cr
-#' used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param posd.tol [\code{numeric(1)}]\cr
-#' used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #'
 #' @export
 #' @return [\code{\link{RegFitObj}(1)}]
@@ -262,6 +262,7 @@ setb0 <- function(rfo, b0) {
 #' @param optmeth [\code{character(1)}]\cr
 #' new value.
 #' @keywords internal
+#' @export
 #'
 #' @author Cesaire J. K. Fouodo
 setOptMeth <- function(rfo, optmeth) {
@@ -368,13 +369,13 @@ setSV.default <- function(rfo, sv) {
 #' @title \code{RegFitObj} (regression approach)
 #' @param rfo [\code{RegFitObj}(1)]\cr
 #' object taken in the argument.
-#' @param Kernel [\code{\link{Kernel}(1)}]\cr
+#' @param kernel [\code{\link{Kernel}(1)}]\cr
 #' new object of class \code{Kernel}.
 #'
 #' @return [\code{RegFitObj}(1)]
 #' modified object.
 #' @keywords internal
-setKernel.default <- function(rfo, Kernel) {
+setKernel.default <- function(rfo, kernel) {
   return(rfo)
 }
 #' Default mutator of the field \code{OptMeth} of the object taken in an argument.
@@ -391,6 +392,7 @@ setKernel.default <- function(rfo, Kernel) {
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
+#' @export
 setOptMeth.default <- function(rfo, optmeth) {
   return(rfo)
 }
@@ -529,9 +531,11 @@ setKernel.RegFitObj <- function(rfo, kernel) {
 #' @param optmeth [\code{character(1)}]\cr
 #' names the solver.
 #'
+#' @keywords internal
 #' @return [\code{RegFitObj}(1)]
 #' modified version of the object taken in the argument.
-#' @keywords internal
+#' 
+#' @export
 setOptMeth.RegFitObj <- function(rfo, optmeth) {
   rfo$OptMeth <- optmeth
   return(rfo)

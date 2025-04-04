@@ -63,23 +63,23 @@
 #' String indicating which of \code{'makediff1'}, \code{'makediff2'} or \code{'makediff3'}
 #' will be used.
 #' @param opt_alg [\code{character}]\cr
-#' Program that will be used to solve the quadratic optimization problem. Either \code{\link{quadprog}} or \code{\link{ipop}}.
+#' Program that will be used to solve the quadratic optimization problem. Either \code{\link[pracma]{quadprog}} or \code{\link[kernlab]{ipop}}.
 #' @param sgf_sv [\code{integer(1)}]\cr
 #' Number of decimal digits in the solution of the quadratic optimization problem.
 #' @param sigf [\code{integer(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param maxiter [\code{inter(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param margin [\code{numeric(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param bound [\code{numeric(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param eig.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param conv.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param posd.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{\link[Matrix]{nearPD}} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #'
 #' @export
 #' @return [\code{VB2FitObj(1)}]

@@ -65,23 +65,23 @@
 #' String indicating which of \code{'makediff1'}, \code{'makediff2'} or \code{'makediff3'}
 #' will be used.
 #' @param opt_alg [\code{character(1)}]\cr
-#' Program that will be used to solve the quadratic optimization problem. Either \code{\link{quadprog}} or \code{\link{ipop}}.
+#' Program that will be used to solve the quadratic optimization problem. Either \code{\link[pracma]{quadprog}} or \code{\link[kernlab]{ipop}}.
 #' @param sgf_sv [\code{integer(1)}]\cr
 #' Number of decimal digits in the solution of the quadratic optimization problem.
 #' @param sigf [\code{integer(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param maxiter [\code{integer(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param margin [\code{numeric(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param bound [\code{numeric(1)}]\cr
-#' Used by \code{\link{ipop}}. See \code{\link{ipop}} for details.
+#' Used by \code{\link[kernlab]{ipop}}. See \code{\link[kernlab]{ipop}} for details.
 #' @param eig.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param conv.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #' @param posd.tol [\code{numeric(1)}]\cr
-#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link{nearPD}} for detail.
+#' Used by \code{nearPD} for adjusting positive definiteness. See \code{\link[Matrix]{nearPD}} for detail.
 #'
 #' @export
 #' @return [\code{Hybrid(1)}]
@@ -300,7 +300,7 @@ setDelta.default <- function(hybo, delta) {
 #'
 #'
 #' @title \code{Hybrid} (hybrid approach)
-#' @param hybo [\code{Hybrid(1)}]\cr
+#' @param rfo [\code{Hybrid(1)}]\cr
 #' Object of class \code{Hybrid} taken in the argument.
 #' @param beta [\code{vector(1)}]\cr
 #' Index of binary/categorial variables.
@@ -308,9 +308,9 @@ setDelta.default <- function(hybo, delta) {
 #' @return [\code{Hybrid(1)}]
 #' Modified version of the object taken in the argument.
 #' @keywords internal
-setBeta.HybridObj <- function(hybo, beta) {
-  hybo$Beta <- beta
-  return(hybo)
+setBeta.HybridObj <- function(rfo, beta) {
+  rfo$Beta <- beta
+  return(rfo)
 }
 #' Default mutator of the field \code{Betastar} of the object taken in an argument.
 #'
@@ -398,15 +398,15 @@ getDelta.default <- function(hybo) {
 #'
 #'
 #' @title \code{Hybrid} (hybrid approach)
-#' @param hybo [\code{Hybrid(1)}]\cr
+#' @param rfo [\code{Hybrid(1)}]\cr
 #' Object taken in the argument.
 #' @return [\code{vector(1)}]
 #' Beta field of the object of class \code{Hybrid} taken in the argument.
 #' @keywords internal
 #'
 #' @author Cesaire J. K. Fouodo
-getBeta.HybridObj <- function(hybo) {
-  return(hybo$Beta)
+getBeta.HybridObj <- function(rfo) {
+  return(rfo$Beta)
 }
 #' Creator of the generic accessor \code{Betastar}.
 #'

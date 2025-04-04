@@ -4,10 +4,10 @@
 \alias{setMat}
 \title{\code{Kernel}}
 \usage{
-setMat(kern, mat)
+setMat(obj, mat)
 }
 \arguments{
-\item{kern}{[\code{\link{Kernel}(1)}]\cr
+\item{obj}{[\code{Object(1)}]\cr
 Object taken in the argument.}
 
 \item{mat}{[\code{matrix(1)}]\cr
